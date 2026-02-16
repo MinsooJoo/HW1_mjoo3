@@ -8,9 +8,15 @@ def kfold_split(x,y,K,kcurr):
     Nfold = int(np.floor(N/K))
 
     ### <--- START OF YOUR CODE
+    start_idx = kcurr * Nfold
 
-    idxVal = 0
-    idxPreVal = 0
+    if kcurr == K-1:
+        end_idx = N
+    else:
+        end_idx = (kcurr + 1) * Nfold
+
+    idxVal = np.arange(start_idx, end_idx)
+    idxPreVal = np.setdiff1d(np.arange(N), idxVal)
 
     ### END OF YOUR CODE --->
 
