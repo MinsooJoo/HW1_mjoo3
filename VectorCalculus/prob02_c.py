@@ -11,7 +11,14 @@ def u(x1,x2):
 def dfou(x_1,x_2):
     
     ### <--- START OF YOUR CODE
-    dfou = np.array(0)
+    u_val = u(x_1, x_2)
+    z_1 = u_val[0, 0]
+    z_2 = u_val[1, 0]
+
+    Df_val = Df(z_1, z_2)
+    Du_val = Du(x_1, x_2)
+
+    dfou = Df_val @ Du_val
     ### END OF YOUR CODE --->
 
     return dfou
