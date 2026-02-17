@@ -4,8 +4,7 @@ def Df(z_1,z_2):
     
     ### <--- START OF YOUR CODE
  
-    Df = np.array([[0,0]])
-
+    Df = np.array([[(1 + z_1 - z_2) * np.exp(z_1), -np.exp(z_1)]])
     ### END OF YOUR CODE --->
 
     return Df

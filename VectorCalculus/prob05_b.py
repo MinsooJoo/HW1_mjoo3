@@ -3,8 +3,8 @@ import numpy as np
 def Dg(y_1,y_2):
     
     ### <--- START OF YOUR CODE
-    Dg = np.array(0)
-    ### END OF YOUR CODE --->
+    Dg = np.array([[1, 2],
+                   [4, -1]])    ### END OF YOUR CODE --->
 
     return Dg
 
